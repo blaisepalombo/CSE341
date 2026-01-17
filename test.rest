@@ -1,0 +1,5 @@
+### LOCAL: Get all contacts
+GET http://localhost:3000/contacts
+
+### LOCAL: Get one contact by id (replace ID)
+GET http://localhost:3000/contacts/696c06a213ac8e78ab4700b4

@@ -5,4 +5,7 @@ const homeController = require('../controllers/homeController');
 
 router.get('/', homeController.getName);
 
+// mount contacts routes
+router.use('/contacts', require('./contacts'));
+
 module.exports = router;
