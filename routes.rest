@@ -1,0 +1,40 @@
+### 1) GET ALL (LOCAL)
+GET http://localhost:3000/contacts
+
+
+### 2) POST CREATE (LOCAL) - copy the returned id
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Ashley",
+  "lastName": "Weaver",
+  "email": "ashley@gmail.com",
+  "favoriteColor": "purple",
+  "birthday": "1998-03-15"
+}
+
+
+### 3) GET BY ID (LOCAL) - replace REPLACE_ID
+GET http://localhost:3000/contacts/69754849440b29f96230f2a4
+
+
+### 4) PUT UPDATE (LOCAL) - replace REPLACE_ID (send all 5 fields)
+PUT http://localhost:3000/contacts/69754849440b29f96230f2a4
+Content-Type: application/json
+
+{
+  "firstName": "Ashley",
+  "lastName": "Weaver",
+  "email": "ashley@gmail.com",
+  "favoriteColor": "green",
+  "birthday": "1998-03-15"
+}
+
+
+### 5) DELETE (LOCAL) - replace REPLACE_ID
+DELETE http://localhost:3000/contacts/69754849440b29f96230f2a4
+
+
+### 6) GET BY ID AGAIN (LOCAL) - should be 404 after delete
+GET http://localhost:3000/contacts/69754849440b29f96230f2a4
