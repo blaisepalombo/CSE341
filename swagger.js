@@ -5,7 +5,7 @@ const doc = {
     title: 'Contacts API',
     description: 'API documentation for Contacts project'
   },
-  host: 'localhost:3000',
+  host: 'https://cse341-bgth.onrender.com',
   schemes: ['http'],
   components: {
     schemas: {
