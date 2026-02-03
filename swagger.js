@@ -1,3 +1,4 @@
+// swagger.js
 const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
@@ -5,8 +6,8 @@ const doc = {
     title: 'Contacts API',
     description: 'API documentation for Contacts project'
   },
-  host: 'https://cse341-bgth.onrender.com',
-  schemes: ['http'],
+  host: 'cse341-bgth.onrender.com',   // NO https:// here
+  schemes: ['https'],                 // Render uses https
   components: {
     schemas: {
       Contact: {
@@ -21,6 +22,6 @@ const doc = {
 };
 
 const outputFile = './swagger.json';
-const endpointsFiles = ['./routes/index.js']; // routes entry point
+const endpointsFiles = ['./routes/index.js'];
 
 swaggerAutogen(outputFile, endpointsFiles, doc);
