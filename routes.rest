@@ -16,11 +16,11 @@ Content-Type: application/json
 
 
 ### 3) GET BY ID (LOCAL) - replace REPLACE_ID
-GET http://localhost:3000/contacts/69754849440b29f96230f2a4
+GET http://localhost:3000/contacts/69754cea16c6f6dc6ac37269
 
 
 ### 4) PUT UPDATE (LOCAL) - replace REPLACE_ID (send all 5 fields)
-PUT http://localhost:3000/contacts/69754849440b29f96230f2a4
+PUT http://localhost:3000/contacts/69754cea16c6f6dc6ac37269
 Content-Type: application/json
 
 {
@@ -33,8 +33,50 @@ Content-Type: application/json
 
 
 ### 5) DELETE (LOCAL) - replace REPLACE_ID
-DELETE http://localhost:3000/contacts/69754849440b29f96230f2a4
+DELETE http://localhost:3000/contacts/69754cea16c6f6dc6ac37269
 
 
 ### 6) GET BY ID AGAIN (LOCAL) - should be 404 after delete
-GET http://localhost:3000/contacts/69754849440b29f96230f2a4
+GET http://localhost:3000/contacts/69754cea16c6f6dc6ac37269
+
+
+
+
+@renderBase = https://cse341-bgth.onrender.com
+
+### RENDER – GET ALL
+GET {{renderBase}}/contacts
+
+
+### RENDER – POST (CREATE CONTACT)
+POST {{renderBase}}/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Ashley",
+  "lastName": "Weaver",
+  "email": "ashley@gmail.com",
+  "favoriteColor": "purple",
+  "birthday": "1998-03-15"
+}
+
+
+### RENDER – GET BY ID (replace REPLACE_ID)
+GET {{renderBase}}/contacts/69755096d231a77201197537
+
+
+### RENDER – PUT (UPDATE CONTACT)
+PUT {{renderBase}}/contacts/69755096d231a77201197537
+Content-Type: application/json
+
+{
+  "firstName": "Ashley",
+  "lastName": "Weaver",
+  "email": "ashley@gmail.com",
+  "favoriteColor": "green",
+  "birthday": "1998-03-15"
+}
+
+
+### RENDER – DELETE (DELETE CONTACT)
+DELETE {{renderBase}}/contacts/69755096d231a77201197537
